@@ -7,4 +7,4 @@ for the case of time series k-means uses DTW (Dynamic Time Warping) metric which
 
 * Source of Data:
 
-this dataset was scraped from [LeBoursier](https://www.leboursier.ma/) 
+this dataset was scraped from [LeBoursier](https://www.leboursier.ma/)
