@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.10.0-10-amd64-x86_64-with-glibc2.31",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-01-20T00:05:55.230197",
+    "startedAt": "2022-01-20T00:05:53.340757",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/home/ayman/.local/share/jupyter/runtime/kernel-fb6411ed-18bd-41ad-b519-189f8b228d25.json"
+    ],
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "git@github.com:pillarxyz/moroccan-stocks-clustering.git",
+        "commit": "f50b780ceff4182ede9ad6a382aa8396eae6d51f"
+    },
+    "email": "ayman.lafaz@um5r.ac.ma",
+    "root": "/home/ayman/Projects/moroccan-stock-clustering",
+    "host": "ayman-hpelitebook850g1",
+    "username": "ayman",
+    "executable": "/home/ayman/anaconda3/bin/python"
+}
