@@ -1,0 +1,62 @@
+wandb_version: 1
+
+_callback:
+  desc: null
+  value: wandb.sdk.wandb_run.Run._config_callback
+_items:
+  desc: null
+  value:
+    _wandb: {}
+    metric: dtw
+    n_clusters: 5
+    seed: 42
+_locked:
+  desc: null
+  value: {}
+_settings:
+  desc: null
+  value: <wandb.sdk.wandb_settings.Settings object at 0x7f633f5d68e0>
+_users:
+  desc: null
+  value: {}
+_users_cnt:
+  desc: null
+  value: 0
+_users_inv:
+  desc: null
+  value: {}
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.9
+    framework: sklearn
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.9.7
+    start_time: 1642675811
+    t:
+      1:
+      - 5
+      4: 3.9.7
+      5: 0.12.9
+      8:
+      - 1
+      - 5
+labels:
+  desc: null
+  value: "[[[0.15427099]\n  [0.2490887 ]\n  [0.28088388]\n  ...\n  [0.33461336]\n\
+    \  [0.41054179]\n  [0.56283176]]\n\n [[0.17392412]\n  [0.04105174]\n  [0.14606864]\n\
+    \  ...\n  [0.90567385]\n  [0.88806956]\n  [0.95045492]]\n\n [[0.47043708]\n  [0.52872375]\n\
+    \  [0.47317802]\n  ...\n  [0.05141834]\n  [0.08016859]\n  [0.08866622]]\n\n [[0.85385995]\n\
+    \  [0.68093809]\n  [0.82525149]\n  ...\n  [0.51427856]\n  [0.64226046]\n  [0.83549806]]\n\
+    \n [[0.91583578]\n  [0.75711575]\n  [0.94475002]\n  ...\n  [0.0793214 ]\n  [0.12019056]\n\
+    \  [0.2410577 ]]]"
+metric:
+  desc: null
+  value: dtw
+n_clusters:
+  desc: null
+  value: 5
+seed:
+  desc: null
+  value: 42

@@ -1,0 +1,61 @@
+wandb_version: 1
+
+_callback:
+  desc: null
+  value: wandb.sdk.wandb_run.Run._config_callback
+_items:
+  desc: null
+  value:
+    _wandb: {}
+    labels: []
+    metric: dtw
+    n_clusters: 5
+    seed: 42
+_locked:
+  desc: null
+  value: {}
+_settings:
+  desc: null
+  value: <wandb.sdk.wandb_settings.Settings object at 0x7f598c2c78e0>
+_users:
+  desc: null
+  value: {}
+_users_cnt:
+  desc: null
+  value: 0
+_users_inv:
+  desc: null
+  value: {}
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.9
+    framework: sklearn
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.9.7
+    start_time: 1642674058
+    t:
+      1:
+      - 5
+      2:
+      - 5
+      3:
+      - 19
+      4: 3.9.7
+      5: 0.12.9
+      8:
+      - 1
+      - 5
+labels:
+  desc: null
+  value: []
+metric:
+  desc: null
+  value: dtw
+n_clusters:
+  desc: null
+  value: 5
+seed:
+  desc: null
+  value: 42
