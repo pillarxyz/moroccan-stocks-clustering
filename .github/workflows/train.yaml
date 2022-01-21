@@ -16,4 +16,5 @@ jobs:
           dvc metrics diff --show-md master > report.md
           # Add figure to the report
           cml-publish plots/cdistribution.jpeg --md >> report.md
+          cml-publish plots/clustered_timeseries.jpeg --md >> report.md
           cml-send-comment report.md
