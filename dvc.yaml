@@ -1,6 +1,6 @@
 stages:
   process:
-    cmd: python src/preprocess.py --pca 1
+    cmd: python src/preprocess.py --pca 0
     deps:
     - src/preprocess.py
     - data/stocks.csv
