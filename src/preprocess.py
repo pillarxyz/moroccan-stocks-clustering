@@ -43,7 +43,7 @@ plt.savefig('plots/timeseries.jpeg')
 # Run PCA (if specified)
 def run_pca(data):
     print("running PCA")
-    n_components = 40
+    n_components = 30
     pca = PCA(n_components)
     ts_pca = pca.fit_transform(np.array(data).reshape(data.shape[0], data.shape[1]))
     n_pca = pca.n_components_
