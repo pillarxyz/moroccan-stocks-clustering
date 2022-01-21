@@ -1,0 +1,40 @@
+schema: '2.0'
+stages:
+  process:
+    cmd: python src/preprocess.py --pca 0
+    deps:
+    - path: data/stocks.csv
+      md5: 087eade32eaee5ebb2a2b4fed5878843
+      size: 574862
+    - path: src/preprocess.py
+      md5: dcb158a84ed45840594647eed098deb2
+      size: 2333
+    outs:
+    - path: data/data_preprocessed.csv
+      md5: ed56d744ff4b165452f9484db92c3e02
+      size: 458500
+    - path: data/processed_df.csv
+      md5: ce1327e23cb62f1be20d3adb4ad92c22
+      size: 118847
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/data_preprocessed.csv
+      md5: ed56d744ff4b165452f9484db92c3e02
+      size: 458500
+    - path: data/processed_df.csv
+      md5: ce1327e23cb62f1be20d3adb4ad92c22
+      size: 118847
+    - path: src/train.py
+      md5: 4310c4f9f319c447862492e65c328584
+      size: 1982
+    outs:
+    - path: model/metrics.json
+      md5: 94d11ed3c74d5b998a6ec8b1771aec49
+      size: 95
+    - path: plots/cdistribution.jpeg
+      md5: 181022e6b9ce90d69ac0a17b2a2efaa9
+      size: 43866
+    - path: plots/clustered_timeseries.jpeg
+      md5: b34e02634b1908922659bfa373850200
+      size: 1775515

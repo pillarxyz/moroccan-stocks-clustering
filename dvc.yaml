@@ -1,0 +1,21 @@
+stages:
+  process:
+    cmd: python src/preprocess.py --pca 0
+    deps:
+    - src/preprocess.py
+    - data/stocks.csv
+    outs:
+    - data/data_preprocessed.csv
+    - data/processed_df.csv
+  train:
+    cmd: python src/train.py
+    deps:
+    - src/train.py
+    - data/data_preprocessed.csv
+    - data/processed_df.csv
+    outs:
+    - plots/cdistribution.jpeg
+    - plots/clustered_timeseries.jpeg
+    metrics:
+    - model/metrics.json:
+        cache: false

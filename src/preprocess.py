@@ -10,7 +10,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--pca", type = int, choices = [0, 1], required = True, default = 0)
 pca = ap.parse_args().pca
 
-stocks_df = pd.read_csv("../data/stocks.csv")
+stocks_df = pd.read_csv("data/stocks.csv")
 
 # Formatting the date column
 stocks_df.date = pd.to_datetime(stocks_df.date, format='%d/%m/%Y')
@@ -31,14 +31,14 @@ stocks_df.drop("date", axis = 1, inplace = True)
 
 cols = stocks_df.columns
 
-if not os.path.isdir("../plots"):
-    os.mkdir("../plots")
+if not os.path.isdir("plots"):
+    os.mkdir("plots")
 fig, axs = plt.subplots(10,7,figsize=(35,35))
 for i in range(10):
     for j in range(7):
         axs[i, j].plot(stocks_df[cols[i*7+j]].values)
         axs[i, j].set_title(cols[i*7+j])
-plt.savefig('../plots/timeseries.jpeg')
+plt.savefig('plots/timeseries.jpeg')
 
 # Run PCA (if specified)
 def run_pca(data):
@@ -55,14 +55,14 @@ def run_pca(data):
 
 if pca:
     data_preprocessed, n_pca, most_important_names = run_pca(stocks_df)
-    data_preprocessed.to_csv("../data/processed_df.csv")
+    data_preprocessed.to_csv("data/processed_df.csv")
 else:
     data_preprocessed = stocks_df
-    data_preprocessed.to_csv("../data/processed_df.csv")
+    data_preprocessed.to_csv("data/processed_df.csv")
 
 # Normalize and reshape time series
 ts = np.array(data_preprocessed.T).reshape(data_preprocessed.T.shape[0], data_preprocessed.T.shape[1], 1)
 ts = TimeSeriesScalerMinMax().fit_transform(ts)
 
-np.savetxt("../data/data_preprocessed.csv", ts.reshape(ts.shape[0], ts.shape[1]))
+np.savetxt("data/data_preprocessed.csv", ts.reshape(ts.shape[0], ts.shape[1]))
 
