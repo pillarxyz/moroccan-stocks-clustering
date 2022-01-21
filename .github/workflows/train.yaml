@@ -13,7 +13,7 @@ jobs:
           pip install -r requirements.txt
           dvc repro 
           git fetch --prune
-          dvc metrics diff --show-md experiments > report.md
+          dvc metrics diff --show-md master > report.md
           # Add figure to the report
           cml-publish plots/cdistribution.jpeg --md >> report.md
           cml-send-comment report.md
