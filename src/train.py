@@ -14,6 +14,8 @@ n_clusters = 4
 seed = 42
 metric = 'dtw'
 
+np.random.seed(seed)
+
 # Loading processed dataset
 stocks = pd.read_csv("data/processed_df.csv").drop('date', axis = 1)
 ts = np.loadtxt("data/data_preprocessed.csv")
