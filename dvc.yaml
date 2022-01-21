@@ -7,6 +7,7 @@ stages:
     outs:
     - data/data_preprocessed.csv
     - data/processed_df.csv
+    - plots/timeseries.jpeg
   train:
     cmd: python src/train.py
     deps:
