@@ -9,6 +9,6 @@ for the case of time series k-means uses DTW (Dynamic Time Warping) metric which
 
 Our analysis leads us to find out about the companies that flourished despite the pandemic, the ones that did suffer but managed to recover and the ones that suffered the most.
 
-* Source of Data:
+* Data Source:
 
 this dataset was scraped from [LeBoursier](https://www.leboursier.ma/)
