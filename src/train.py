@@ -57,6 +57,22 @@ ax.bar(cluster_n, cluster_c)
 plt.savefig('plots/cdistribution.jpeg')
 
 # Visualize clustered time series
+
+for yi in range(n_clusters):
+    plt.subplot(3, 3, 4 + yi)
+    for xx in ts[y_pred == yi]:
+        plt.plot(xx.ravel(), "k-", alpha=.2)
+    plt.plot(km.cluster_centers_[yi].ravel(), "r-")
+    plt.xlim(0, ts.shape[1])
+    plt.ylim(-.5, 1.5)
+    plt.text(0.55, 0.85,'Cluster %d' % (yi),
+             transform=plt.gca().transAxes)
+    plt.gcf().set_size_inches(15, 15)
+    if yi == 1:
+        plt.title("DBA $k$-means")
+plt.savefig('plots/clusters.jpeg')
+
+
 colors = ['b', 'g','r', 'k', 'orange', 'brown', 'y']
 fig, ax = plt.subplots(10, 7,figsize=(35,35))
 for i in range(10):
