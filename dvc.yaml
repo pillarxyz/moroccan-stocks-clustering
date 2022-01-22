@@ -17,6 +17,7 @@ stages:
     outs:
     - plots/cdistribution.jpeg
     - plots/clustered_timeseries.jpeg
+    - plots/clusters.jpeg
     metrics:
     - model/metrics.json:
         cache: false
