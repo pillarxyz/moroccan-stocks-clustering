@@ -9,6 +9,15 @@ for the case of time series k-means uses DTW (Dynamic Time Warping) metric which
 
 Our analysis leads us to find out about the companies that flourished despite the pandemic, the ones that did suffer but managed to recover and the ones that suffered the most.
 
+* Quick Start
+
+To start the notebook and run the pipeline simply run these commands 
+```
+git clone https://github.com/pillarxyz/moroccan-stocks-clustering
+bash start.sh
+```
+
+
 * Data Source:
 
 this dataset was scraped from [LeBoursier](https://www.leboursier.ma/)
