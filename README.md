@@ -20,8 +20,8 @@ To be able to run the notebook on your machine you need to have [docker installe
 To start the notebook and run the pipeline simply run these commands 
 
 ```bash
-git clone https://github.com/pillarxyz/moroccan-stocks-clustering
-cd moroccan-stocks-clustering-master
+git clone https://github.com/pillarxyz/moroccan-stocks-clustering.git
+cd moroccan-stocks-clustering
 docker build -t ma_cluster
 docker run -it -p 8888:8888 ma_cluster
 ```
