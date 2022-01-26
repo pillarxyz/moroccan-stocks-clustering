@@ -97,4 +97,4 @@ if __name__ == "__main__":
     if not os.path.isdir("../data"):
         os.mkdir("../data")
     
-    stocks_df.to_csv("../data/stocks_test.csv")
+    stocks_df.to_csv("../data/stocks.csv")
