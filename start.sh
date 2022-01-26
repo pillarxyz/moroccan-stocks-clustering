@@ -1,9 +1,8 @@
 #!bin/bash
 
-pip install -r requirements.txt
-pip install dvc
+pip3 install -r requirements.txt
+pip3 install dvc
 cd src
 python get_data.py
 cd ..
 dvc repro
-jupyter-lab analysis.ipynb

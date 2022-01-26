@@ -4,3 +4,10 @@ pandas
 seaborn
 tslearn
 wandb
+BeautifulSoup4
+requests
+datetime
+argparse
+sklearn
+joblib
+lxml
