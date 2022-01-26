@@ -12,7 +12,8 @@ Our analysis leads us to find out about the companies that flourished despite th
 * Quick Start
 
 To start the notebook and run the pipeline simply run these commands 
-```
+
+```bash
 git clone https://github.com/pillarxyz/moroccan-stocks-clustering
 bash start.sh
 ```
