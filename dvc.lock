@@ -4,8 +4,8 @@ stages:
     cmd: python src/preprocess.py --pca 0
     deps:
     - path: data/stocks.csv
-      md5: d64fd6e96cb75d8ec63ba069db95ff30
-      size: 575003
+      md5: 594861dc1fedad9806b0394d218972f6
+      size: 575474
     - path: src/preprocess.py
       md5: dcb158a84ed45840594647eed098deb2
       size: 2333
