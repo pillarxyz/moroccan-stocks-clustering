@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 tslearn
-=======
->>>>>>> 15e2f4f1999e6560c7dd53e7f391408905476cd0
 seaborn
 wandb
 datetime
 argparse
 lxml
 plotly
-beautifulsoup4==4.10.0
-joblib==1.1.0
-matplotlib==3.5.1
-numpy==1.21.2
-pandas==1.4.0
-requests==2.27.1
-scikit_learn==1.0.2
-<<<<<<< HEAD
-=======
-tslearn==0.5.2
->>>>>>> 15e2f4f1999e6560c7dd53e7f391408905476cd0
+beautifulsoup4
+joblib
+matplotlib
+numpy
+pandas
+requests
+scikit_learn
