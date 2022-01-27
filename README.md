@@ -1,7 +1,5 @@
 # Moroccan Stocks Clustering
 
-> In progress
-
 ## Context
 
 Hey! we don't always have to forecast time series am I right ?

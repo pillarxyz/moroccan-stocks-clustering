@@ -8,7 +8,7 @@ WORKDIR $APP_HOME
 COPY . ./
 
 RUN apt-get update
-RUN pip install jupyter
+RUN pip install jupyter jupyterlab
 RUN bash start.sh
 
 CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root" ]

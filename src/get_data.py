@@ -81,7 +81,7 @@ def loadmany(*args, start=None, end=None):
 		row = provisoir["Value"]
 		data.append(row)
 
-	data = pd.concat(data, axis = 1, sort="False").reindex(data[0].index)
+	data = pd.concat(data, axis = 1, sort = False).reindex(data[0].index)
 	data.columns = args
 	return data
 
