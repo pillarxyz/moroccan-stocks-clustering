@@ -35,8 +35,8 @@ km_metrics['Silhouette Score'] = s
 km_metrics['Inertia'] = inertia
 
 if not os.path.isdir("model"):
-    os.mkdir("model")
-    
+    os.mkdir('model')
+
 # Saving models
 joblib.dump(km, "model/kmeans.sav")
 

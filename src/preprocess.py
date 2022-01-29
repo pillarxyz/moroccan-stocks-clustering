@@ -5,11 +5,14 @@ from tslearn.preprocessing import TimeSeriesScalerMinMax
 from tslearn.piecewise import PiecewiseAggregateApproximation as PAA
 import matplotlib.pyplot as plt
 import os, argparse
+import json
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--dimrec", type = int, choices = [0, 1], required = True, default = 0)
 dimrec = ap.parse_args().dimrec
+n_segments = 10
 
+# Reading data
 stocks_df = pd.read_csv("data/stocks.csv")
 
 # Formatting the date column
@@ -33,6 +36,7 @@ cols = stocks_df.columns
 
 if not os.path.isdir("plots"):
     os.mkdir("plots")
+
 fig, axs = plt.subplots(10,7,figsize=(35,35))
 for i in range(10):
     for j in range(7):
@@ -52,7 +56,7 @@ def run_paa(ts, n_segments):
     return ts_paa
 
 if dimrec:
-    ts = run_paa(ts, 10)
+    ts = run_paa(ts, n_segments)
 
 stocks_df.to_csv("data/processed_df.csv")
 np.savetxt("data/data_preprocessed.csv", ts.reshape(ts.shape[0], ts.shape[1]))

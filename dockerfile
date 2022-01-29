@@ -11,4 +11,4 @@ RUN apt-get update
 RUN pip install jupyter jupyterlab
 RUN bash start.sh
 
-CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root" ]
+CMD [ "jupyter-lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root" ]

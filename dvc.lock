@@ -4,43 +4,43 @@ stages:
     cmd: python src/preprocess.py --dimrec 1
     deps:
     - path: data/stocks.csv
-      md5: 594861dc1fedad9806b0394d218972f6
-      size: 575474
+      md5: 2065896b37e4f2f511e77a14cda59573
+      size: 575604
     - path: src/preprocess.py
-      md5: f53aeda4f5cee9d8ddd413a14c99d8b3
-      size: 1802
+      md5: 9b1a94b0ec7cf2c457b066a7973ec27b
+      size: 1854
     outs:
     - path: data/data_preprocessed.csv
-      md5: 323901e1271ea3c0623d3a846c9bb01e
+      md5: 9424cc07cd38819eebd86f244a4b0180
       size: 17500
     - path: data/processed_df.csv
-      md5: 93c9175271d7b5d81ec250c9ed0533ff
-      size: 118848
+      md5: 162d1eab79760658c0bdff667400d5a9
+      size: 118903
     - path: plots/timeseries.jpeg
-      md5: 534bb4536bd0afbdeefa1ea28391c145
-      size: 959239
+      md5: 1126143dc6384db89f6334e52e1d06d4
+      size: 954120
   train:
     cmd: python src/train.py
     deps:
     - path: data/data_preprocessed.csv
-      md5: 323901e1271ea3c0623d3a846c9bb01e
+      md5: 9424cc07cd38819eebd86f244a4b0180
       size: 17500
     - path: data/processed_df.csv
-      md5: 93c9175271d7b5d81ec250c9ed0533ff
-      size: 118848
+      md5: 162d1eab79760658c0bdff667400d5a9
+      size: 118903
     - path: src/train.py
-      md5: ad8eb9605bb8f918a7aa508d2fd13b01
-      size: 2460
+      md5: ffe27bd06d0fda9e41a4f7b04be9eedd
+      size: 2402
     outs:
     - path: model/metrics.json
-      md5: b9b8768c284fa70512c304d8478340ed
+      md5: 1d074b5ff5109670acffc478fcb042a3
       size: 97
     - path: plots/cdistribution.jpeg
-      md5: 2f12c1bddc20312d1d37d8cb0b7d26fa
-      size: 32520
+      md5: c86d01f1dfac4db89a8690e0a4c981df
+      size: 32505
     - path: plots/clustered_timeseries.jpeg
-      md5: 5125f418ce7505c3a308a0a70e845be7
-      size: 1040197
+      md5: d02041c3ac2391a6bbe6461d5e878ff2
+      size: 1034212
     - path: plots/clusters.jpeg
-      md5: 2b88a7ee93398291faee554dedb9c4b2
-      size: 97027
+      md5: 2f8f5e8349e5870443e4a3178b525a29
+      size: 97344
