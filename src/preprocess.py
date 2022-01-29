@@ -2,7 +2,7 @@ import tslearn
 import numpy as np
 import pandas as pd
 from tslearn.preprocessing import TimeSeriesScalerMinMax
-from sklearn.decomposition import PCA
+from tslearn.piecewise import PiecewiseAggregateApproximation as PAA
 import matplotlib.pyplot as plt
 import os, argparse
 
@@ -40,29 +40,20 @@ for i in range(10):
         axs[i, j].set_title(cols[i*7+j])
 plt.savefig('plots/timeseries.jpeg')
 
-# Run PCA (if specified)
-def run_pca(data):
-    print("running PCA")
-    n_components = 40
-    pca = PCA(n_components)
-    ts_pca = pca.fit_transform(np.array(data).reshape(data.shape[0], data.shape[1]))
-    n_pca = pca.n_components_
-    most_important = [np.abs(pca.components_[i]).argmax() for i in range(n_pca)]
-    initial_feature_names = data.columns
-    most_important_names = list(set([initial_feature_names[most_important[i]] for i in range(n_pca)]))
-    data_preprocessed = data[most_important_names]
-    return data_preprocessed, n_pca, most_important_names
-
-if dimrec:
-    data_preprocessed, n_pca, most_important_names = run_pca(stocks_df)
-    data_preprocessed.to_csv("data/processed_df.csv")
-else:
-    data_preprocessed = stocks_df
-    data_preprocessed.to_csv("data/processed_df.csv")
-
 # Normalize and reshape time series
-ts = np.array(data_preprocessed.T).reshape(data_preprocessed.T.shape[0], data_preprocessed.T.shape[1], 1)
+ts = np.array(stocks_df.T).reshape(stocks_df.T.shape[0], stocks_df.T.shape[1], 1)
 ts = TimeSeriesScalerMinMax().fit_transform(ts)
 
+# Run PAA (if specified)
+def run_paa(ts, n_segments):
+    print("running PAA")
+    paa = PAA(n_segments = n_segments)
+    ts_paa = paa.fit_transform(ts)
+    return ts_paa
+
+if dimrec:
+    ts = run_paa(ts, 10)
+
+stocks_df.to_csv("data/processed_df.csv")
 np.savetxt("data/data_preprocessed.csv", ts.reshape(ts.shape[0], ts.shape[1]))
 
