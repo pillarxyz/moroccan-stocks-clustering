@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import os, argparse
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--pca", type = int, choices = [0, 1], required = True, default = 0)
-pca = ap.parse_args().pca
+ap.add_argument("--dimrec", type = int, choices = [0, 1], required = True, default = 0)
+dimrec = ap.parse_args().dimrec
 
 stocks_df = pd.read_csv("data/stocks.csv")
 
@@ -53,7 +53,7 @@ def run_pca(data):
     data_preprocessed = data[most_important_names]
     return data_preprocessed, n_pca, most_important_names
 
-if pca:
+if dimrec:
     data_preprocessed, n_pca, most_important_names = run_pca(stocks_df)
     data_preprocessed.to_csv("data/processed_df.csv")
 else:
