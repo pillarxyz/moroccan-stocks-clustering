@@ -6,16 +6,16 @@ import datetime
 import os
 
 
-with open("ticker_code.json") as f:
-    ticker_code = json.load(f)
+with open("isin_code.json") as f:
+    isin_code = json.load(f)
     f.close()
 
-ticker_code = json.loads(ticker_code)
+isin_code = json.loads(isin_code)
 
-tickers = [item['name'] for item in ticker_code]
+tickers = [item['name'] for item in isin_code]
 
 def get_code(name):
-    for ticker in ticker_code :
+    for ticker in isin_code :
         if ticker["name"] == name :
             code = ticker['ISIN']
             return code
