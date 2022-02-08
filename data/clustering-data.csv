@@ -1,71 +1,64 @@
-Company,Cluster
-Colorado,0
-Jet Contractors,0
-INVOLYS,0
-Risma,0
-Delta Holding,0
-CTM,0
-Saham Assurance,0
-CDM,0
-Cartier Saada,0
-BMCI,0
-Maroc Leasing,0
-Ste Boissons,0
-Aluminium Maroc,0
-DISWAY,1
-Maghreb Oxygene,1
-M2M Group,1
-Microdata,1
-Lesieur Cristal,1
-AFMA,1
-HPS,1
-EQDOM,1
-Afriquia Gaz,1
-Agma,1
-LABEL VIE,1
-SODEP,1
-TAQA Morocco,1
-Ciments Maroc,1
-ATLANTASANAD,1
-Dari Couspate,1
-S2M,2
-STROC Indus,2
-Oulmes,2
-PROMOPHARM,2
-Unimer,2
-Rebab Company,2
-SMI,2
-Res.Dar Saada,2
-SALAFIN,2
-Med Paper,2
-Timar,2
-Stokvis Nord Afr,2
-SRM,2
-Addoha,2
-Central.Danone,2
-Maghrebail,2
-Lydec,2
-Zellidja,2
-IBMaroc,2
-Ennakl,2
-Delattre Lev,2
-COSUMAR,2
-Alliances,2
-Auto Nejma,2
-Wafa Assur,3
-Afric Indus,3
-Total Maroc,3
-Attijariwafa,3
-Auto Hall,3
-BALIMA,3
-Maroc Telecom,3
-BCP,3
-SNEP,3
-Managem,3
-CIH,3
-CMT,3
-FENIE BROSSETTE,3
-LafargeHolcim,3
-Nexans Maroc,3
-Sonasid,3
-MASI,3
+Company,Sector,Cluster
+AFMA,Insurance,1
+Afric Indus,Construction & Building Materials,3
+Afriquia Gaz,Oil & Gas,1
+Agma,Insurance,1
+Alliances,Real estate participation and promotion,2
+Aluminium Maroc,Construction & Building Materials,0
+ATLANTASANAD,Insurance,1
+Attijariwafa,Banks,3
+Auto Hall,Distributors,3
+Auto Nejma,Distributors,2
+BALIMA,Real estate investment companies,3
+BCP,Banks,3
+BMCI,Banks,0
+Cartier Saada,Food producers & Processors,0
+CDM,Banks,0
+CIH,Banks,3
+Ciments Maroc,Construction & Building Materials,3
+Colorado,Construction & Building Materials,0
+COSUMAR,Food producers & Processors,2
+CTM,Transport,0
+Dari Couspate,Food producers & Processors,1
+Delattre Lev,Engineering & Equipment Industrial Goods,2
+Delta Holding,Holding Companies,0
+DISWAY,"Materials,Software & Computer Services",1
+Ennakl,Distributors,2
+EQDOM,Investment Companies & Other Finance,1
+FENIE BROSSETTE,Distributors,3
+HPS,"Materials,Software & Computer Services",1
+IBMaroc,"Materials,Software & Computer Services",2
+INVOLYS,"Materials,Software & Computer Services",0
+Maroc Telecom,Telecommunications,3
+Jet Contractors,Construction & Building Materials,0
+LABEL VIE,Distributors,1
+LafargeHolcim,Construction & Building Materials,3
+Lesieur Cristal,Food producers & Processors,1
+Lydec,Utilities,2
+M2M Group,"Materials,Software & Computer Services",1
+Maghreb Oxygene,Chemicals,1
+Maghrebail,Investment Companies & Other Finance,2
+Managem,Mining,3
+Maroc Leasing,Investment Companies & Other Finance,0
+Med Paper,Forestry & Paper,2
+Microdata,"Materials,Software & Computer Services",1
+Oulmes,Beverages,2
+PROMOPHARM,Pharmaceutical Industry,2
+Rebab Company,Mining,2
+Res.Dar Saada,Real estate participation and promotion,2
+Risma,Leisures and Hotels,0
+Saham Assurance,Insurance,0
+SALAFIN,Investment Companies & Other Finance,2
+SMI,Mining,2
+SNEP,Chemicals,3
+Ste Boissons,Beverages,0
+SODEP,Transportation Services,1
+Sonasid,Construction & Building Materials,3
+Stokvis Nord Afr,Distributors,2
+STROC Indus,Engineering & Equipment Industrial Goods,2
+TAQA Morocco,Electricity,1
+Timar,Transport,2
+Total Maroc,Oil & Gas,3
+Unimer,Food producers & Processors,2
+Wafa Assur,Insurance,3
+Zellidja,Holding Companies,2
